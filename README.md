@@ -1,23 +1,42 @@
-# Getting Started with [Fastify-CLI](https://www.npmjs.com/package/fastify-cli)
-This project was bootstrapped with Fastify-CLI.
+# Выполнение тестового задания на позицию backend разработчика в KSG INFINITE
 
-## Available Scripts
+## Инструкция к запуску
 
-In the project directory, you can run:
+1. Установка Node.js и npm:
+   - Убедитесь, что у вас установлены Node.js и npm. Вы можете скачать их с официального сайта [Node.js](https://nodejs.org/). Проверьте установку, запустив команды `node -v` и `npm -v` в терминале.
+
+2. Клонирование репозитория:
+   - Откройте терминал и выполните команду для клонирования репозитория:
+     
+    git clone URL_РЕПОЗИТОРИЯ .
+
+3. Установка зависимостей:
+   - Установите все необходимые зависимости из файла `package.json`:
+     
+    npm install
+  
+4. Запуск приложения:
+   - Запустите сервер (см. раздел "Доступные скрипты").
+
+5. Проверка работы сервера:
+   - Откройте браузер и перейдите по адресу [http://localhost:3000](http://localhost:3000), чтобы убедиться, что сервер работает.
+
+## Доступные скрипты
+
+В этом проекте доступны следующие скрипты:
+
+### `npm run build`
+
+Этот скрипт запускает TypeScript компилятор (`tsc`) для компиляции TypeScript-файлов в JavaScript
 
 ### `npm run dev`
 
-To start the app in dev mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Начало разработки приложения в dev-моде.
+Этот скрипт устанавливает переменные окружения `NODE_ENV` и `TS_NODE_BASEURL`, а затем запускает два процесса параллельно с помощью утилиты `concurrently`: процесс `tsc -w` для компиляции TypeScript в режиме наблюдения и процесс `nodemon` для автоматического перезапуска приложения при изменении файла.
+Откройте [http://localhost:3000](http://localhost:3000) чтобы увидеть результат обращения к эндпоинтам в браузере.
 
-### `npm start`
+## Узнать больше
 
-For production mode
-
-### `npm run test`
-
-Run the test cases.
-
-## Learn More
-
-To learn Fastify, check out the [Fastify documentation](https://fastify.dev/docs/latest/).
+Чтобы узнать больше о Fastify, посмотрите [документацию Fastify](https://fastify.dev/docs/latest/).
+Чтобы узнать больше о Typescript, посмотрите [документацию Typescript](https://www.typescriptlang.org/docs/).
+Чтобы узнать больше о Prettier, посмотрите [документацию Prettier](https://prettier.io/docs/en/).
