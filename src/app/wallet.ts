@@ -25,7 +25,7 @@ export async function deductBalance({ userId, amount }: TDeductBalanceProps) {
     const currentBalance = res.rows[0].balance
 
     if (currentBalance < amount)
-      throw new Error('Недостаточно средств на счете.')
+      throw new Error('Insufficient funds in the account.')
 
     const newBalance = currentBalance - amount
     await client.query('UPDATE users SET balance = $1 WHERE id = $2', [
@@ -34,10 +34,9 @@ export async function deductBalance({ userId, amount }: TDeductBalanceProps) {
     ])
 
     await client.query('COMMIT')
-    console.log(`Списано ${amount}. Новый баланс: ${newBalance}`)
   } catch (error) {
     await client.query('ROLLBACK')
-    console.error('Ошибка при списании баланса:', error.message)
+    console.error('Error when writing off balance:', error.message)
   } finally {
     client.release()
   }
