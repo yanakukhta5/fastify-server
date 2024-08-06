@@ -1,4 +1,10 @@
-import { FastifyInstance, FastifyPluginOptions } from 'fastify'
+import { FastifyInstance, FastifyPluginOptions, FastifyRequest } from 'fastify'
+
+import { deductBalance } from './wallet'
+
+type CustomRequest = FastifyRequest<{
+  Body: { userId: number; amount: number }
+}>
 
 async function routes(
   fastify: FastifyInstance,
@@ -10,10 +16,12 @@ async function routes(
   })
 
   // endpoint 2
-  //  fastify.post('/wallet', { schema }, async (request, reply) => {
-  //   const result = await collection.insertOne({ animal: request.body.animal })
-  //   return result
-  //  })
+  fastify.post('/wallet', _options, async (request: CustomRequest, reply) => {
+    deductBalance({
+      userId: request.body.userId,
+      amount: request.body.amount,
+    })
+  })
 }
 
 export default routes
