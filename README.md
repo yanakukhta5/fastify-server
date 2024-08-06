@@ -40,3 +40,4 @@
 Чтобы узнать больше о Fastify, посмотрите [документацию Fastify](https://fastify.dev/docs/latest/).
 Чтобы узнать больше о Typescript, посмотрите [документацию Typescript](https://www.typescriptlang.org/docs/).
 Чтобы узнать больше о Prettier, посмотрите [документацию Prettier](https://prettier.io/docs/en/).
+Чтобы узнать больше о Redis, посмотрите [документацию Redis](https://redis.io/docs/latest/).
