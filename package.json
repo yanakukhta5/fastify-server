@@ -1,7 +1,7 @@
 {
   "name": "KSG INFINITE test task",
   "version": "1.0.0",
-  "description": "Выполнение тестового задания на позицию backend разработчика в KSG INFINITE.",
+  "description": "Практика создания fastify-сервера на node.js.",
   "author": "Yana Kukhta",
   "repository": "https://github.com/yanakukhta5/fastify-server",
   "main": "app.js",
